@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surprise Gift</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        .gift-box {
+            width: 200px;
+            height: 200px;
+            background: url('https://i.imgur.com/zXXPVZe.png') no-repeat center center/cover;
+            margin: 100px auto;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #ff6f61;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .gift-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .gift-box span {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Surprise Gift for You!</h1>
+        </header>
+        <section class="gift-section">
+            <div class="gift-box" onclick="checkPassword()">
+                <span>Click the box</span>
+            </div>
+        </section>
+        <footer>
+            <p>With all my love, [Your Name]</p>
+        </footer>
+    </div>
+    <script>
+        function checkPassword() {
+            const password = prompt("Enter the password to reveal your gift:");
+            if (password === "yourpassword") { // Replace 'yourpassword' with your actual password
+                window.location.href = "index.html";
+            } else {
+                alert("Incorrect password. Please try again.");
+            }
+        }
+    </script>
+</body>
+</html>
